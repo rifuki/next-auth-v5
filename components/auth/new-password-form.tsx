@@ -36,7 +36,7 @@ export function NewPasswordForm() {
   const form = useForm<z.infer<typeof NewPasswordSchema>>({
     resolver: zodResolver(NewPasswordSchema),
     defaultValues: {
-      password: "new",
+      password: "",
     },
   });
 

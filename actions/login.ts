@@ -73,6 +73,7 @@ export async function login(
       const existingConfirmation = await getTwoFactorConfirmationByUserId(
         existingUser.id
       );
+      
       if (existingConfirmation) {
         await db.twoFactorConfirmation.delete({
           where: {
